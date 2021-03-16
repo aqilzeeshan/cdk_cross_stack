@@ -4,3 +4,5 @@
 * To deploy it do `cdk deploy --all` because all stacks need to be deployed.
 * Amazing to see how many resources are created by such few lines of code.
 * VPC with public and private subnets is created first then passed to Another stack as prop where Internet facing ELB is created in the same VPC.
+# To Do
+* To organize https://github.com/aqilzeeshan/cdk-ec2-vpc-subnet in the same way.
