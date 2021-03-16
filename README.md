@@ -1,14 +1,6 @@
-# Welcome to your CDK TypeScript project!
-
-This is a blank project for TypeScript development with CDK.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+* This is based on https://github.com/aws/aws-cdk/issues/4474 
+* It shows how to organize application using multiple stacks.
+* In CloudFormation world nested stacks do this but here simply create stack and pass it to other stack which needs it as props.
+* To deploy it do `cdk deploy --all` because all stacks need to be deployed.
+* Amazing to see how many resources are created by such few lines of code.
+* VPC with public and private subnets is created first then passed to Another stack as prop where Internet facing ELB is created in the same VPC.
